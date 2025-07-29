@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Girlfriends Day to my pretty princess!!</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Happy Girlfriends Day! ❤️</h1>
+
+      <div class="photo-grid">
+        <div class="carousel-container">
+          <div class="carousel" id="carousel">
+            <img src="./Resources/us-1.jpg" class="carousel-image" />
+            <img src="./Resources/us-2.jpg" class="carousel-image" />
+            <img src="./Resources/us-3.jpg" class="carousel-image" />
+            <img src="./Resources/us-4.jpg" class="carousel-image" />
+            <img src="./Resources/us-5.jpg" class="carousel-image" />
+          </div>
+          <div class="carousel-controls">
+            <button onclick="prevSlide()">❮</button>
+            <button onclick="nextSlide()">❯</button>
+          </div>
+        </div>
+
+        <img src="./Resources/her-1.jpg" alt="" class="image-two" />
+        <img src="./Resources/her-2.jpg" alt="" class="image-three" />
+        <img src="./Resources/her-3.jpg" alt="" class="image-four" />
+        <img src="./Resources/her-4.jpg" alt="" class="image-five" />
+      </div>
+
+      <div class="buttons">
+        <button onclick="showMessage()">Message for you</button>
+        <button onclick="playSong()">Play Song</button>
+        <button onclick="clickMore()">Click for more</button>
+      </div>
+    </div>
+    <div id="heart-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
