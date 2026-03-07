@@ -38,6 +38,7 @@ counters.forEach((counter) => {
   update();
 });
 
+// Timeline Read More Functionality
 const buttons = document.querySelectorAll(".timeline-btn");
 
 buttons.forEach((btn) => {

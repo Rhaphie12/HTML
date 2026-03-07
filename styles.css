@@ -59,6 +59,9 @@ body {
 .sermon-card:hover {
   transform: translateY(-8px);
 }
+.sermon-card .btn {
+  width: 100%;
+}
 
 .quote-section {
   background: #0b1d3a;
