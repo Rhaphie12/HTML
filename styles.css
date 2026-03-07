@@ -1,0 +1,222 @@
+body {
+  font-family: Poppins;
+}
+
+.nav-blur {
+  background: rgba(11, 29, 58, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.hero {
+  height: 100vh;
+  min-height: 600px;
+  background: url("./membership-at-metropolitan-taber.png") center/cover
+    no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+}
+
+.hero p {
+  font-size: 1.4rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-gold {
+  background: #c9a24a;
+  color: white;
+  border: none;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.sermon-card {
+  transition: 0.4s;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.sermon-card:hover {
+  transform: translateY(-8px);
+}
+
+.quote-section {
+  background: #0b1d3a;
+  color: white;
+  padding: 80px;
+}
+
+.timeline {
+  position: relative;
+  margin: 40px auto;
+  padding: 20px 0;
+  max-width: 900px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #c9a24a;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-content h4 {
+  color: #c9a24a;
+  font-weight: bold;
+}
+
+.timeline-more {
+  display: none;
+  margin-top: 10px;
+}
+
+.timeline-btn {
+  margin-top: 10px;
+  border: none;
+  background: #0b1d3a;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.timeline-btn:hover {
+  background: #c9a24a;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.4s;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-img:hover {
+  transform: scale(1.08);
+}
+
+.modal-body img {
+  max-height: 400px;
+  object-fit: contain;
+}
+
+footer {
+  background: #0b1d3a;
+  color: white;
+  padding: 20px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 120px 20px;
+    margin-bottom: 70px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
+
+  .sermon-card {
+    margin-bottom: 20px;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 425px) {
+  .hero {
+    padding: 100px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 50px 15px;
+  }
+}
