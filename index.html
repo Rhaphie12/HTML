@@ -91,7 +91,13 @@
             the liberal and pragmatic theological tendencies in the Church of
             his day.
           </p>
-          <a href="" class="btn btn-gold" data-aos="zoom-in"> Read More </a>
+          <a
+            class="btn btn-gold"
+            data-aos="zoom-in"
+            data-bs-toggle="modal"
+            data-bs-target="#story">
+            Read More
+          </a>
 
           <div class="row text-center mt-4">
             <div class="col">
@@ -112,61 +118,186 @@
         </div>
       </div>
     </section>
+    
+    <!-- STORY MODAL -->
+    <div class="modal fade" id="story" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">More about Charles Spurgeon</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <p class="text-center"><strong>The Prince of Preachers</strong></p>
+
+            <p>
+              This sermon teaches that the victory of believers over Satan and
+              sin comes through the blood of the Lamb—Jesus Christ’s sacrificial
+              death on the cross. Satan is portrayed as a powerful enemy who
+              accuses and deceives humanity, but Christ has already defeated him
+              through His death and resurrection.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- SERMONS -->
-
     <section id="sermons" class="section bg-light">
       <div class="container">
-        <h2 class="text-center mb-5">Featured Sermons</h2>
+        <h2 class="text-center mb-4 fw-bold">
+          Charles Spurgeon sermon archives
+        </h2>
 
-        <div class="row g-4">
-          <!-- Sermon 1 -->
-          <div class="col-lg-4 col-md-6 col-12" data-aos="zoom-in">
+        <!-- SEARCH -->
+        <div class="row mb-4 justify-content-center">
+          <div class="col-md-6">
+            <input
+              type="text"
+              id="sermonSearch"
+              class="form-control"
+              placeholder="Search sermons..." />
+          </div>
+        </div>
+
+        <!-- FILTER BUTTONS -->
+        <div class="text-center mb-5">
+          <button class="btn btn-outline-dark filter-btn" data-filter="all">
+            All
+          </button>
+
+          <button
+            class="btn btn-outline-dark filter-btn"
+            data-filter="salvation">
+            Salvation
+          </button>
+
+          <button
+            class="btn btn-outline-dark filter-btn"
+            data-filter="evangelism">
+            Evangelism
+          </button>
+
+          <button
+            class="btn btn-outline-dark filter-btn"
+            data-filter="judgment">
+            Judgment
+          </button>
+        </div>
+
+        <div class="row g-4" id="sermonContainer">
+          <!-- SERMON 1 -->
+          <div class="col-lg-4 col-md-6 sermon-item" data-category="salvation">
             <div class="card sermon-card">
-              <div class="card-body">
-                <h5>The Blood of the Lamb</h5>
-                <p>Topic: Salvation</p>
+              <img src="sermon1.png" class="card-img-top sermon-img" />
 
-                <button
-                  class="btn btn-outline-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#sermon1">
-                  Read Sermon
-                </button>
+              <div class="card-body">
+                <h5 class="sermon-title">
+                  The Blood of the Lamb, the Conquering Weapon
+                </h5>
+
+                <p class="sermon-meta">Topic: Salvation</p>
+
+                <p class="sermon-verse">Revelation 12:11</p>
+
+                <div class="sermon-buttons">
+                  <button
+                    class="btn btn-dark"
+                    data-bs-toggle="modal"
+                    data-bs-target="#sermon1">
+                    Read
+                  </button>
+
+                  <a
+                    href="https://www.youtube.com/watch?v=nk3FWb9BVYg"
+                    target="_self"
+                    class="btn btn-outline-dark">
+                    Watch
+                  </a>
+
+                  <a
+                    href="https://www.spurgeon.org/resource-library/sermons/the-blood-of-the-lamb-the-conquering-weapon/#flipbook/"
+                    class="btn btn-outline-secondary">
+                    Resource
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Sermon 2 -->
-          <div class="col-lg-4 col-md-6 col-12" data-aos="zoom-in">
+          <!-- SERMON 2 -->
+          <div class="col-lg-4 col-md-6 sermon-item" data-category="evangelism">
             <div class="card sermon-card">
-              <div class="card-body">
-                <h5>Compel Them to Come In</h5>
-                <p>Topic: Evangelism</p>
+              <img src="sermon2.png" class="card-img-top sermon-img" />
 
-                <button
-                  class="btn btn-outline-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#sermon2">
-                  Read Sermon
-                </button>
+              <div class="card-body">
+                <h5 class="sermon-title">Compel Them to Come In</h5>
+
+                <p class="sermon-meta">Topic: Evangelism</p>
+
+                <p class="sermon-verse">Luke 14:23</p>
+
+                <div class="sermon-buttons">
+                  <button
+                    class="btn btn-dark"
+                    data-bs-toggle="modal"
+                    data-bs-target="#sermon2">
+                    Read
+                  </button>
+
+                  <a
+                    href="https://www.youtube.com/watch?v=XP3D29Dts4k"
+                    target="_self"
+                    class="btn btn-outline-dark">
+                    Watch
+                  </a>
+
+                  <a
+                    href="https://www.spurgeon.org/resource-library/sermons/compel-them-to-come-in/#flipbook/"
+                    target="_self"
+                    class="btn btn-outline-secondary">
+                    Resource
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Sermon 3 -->
-          <div class="col-lg-4 col-md-6 col-12" data-aos="zoom-in">
+          <!-- SERMON 3 -->
+          <div class="col-lg-4 col-md-6 sermon-item" data-category="judgment">
             <div class="card sermon-card">
-              <div class="card-body">
-                <h5>The Wailing of Risca</h5>
-                <p>Topic: Judgment</p>
+              <img src="sermon3.png" class="card-img-top sermon-img" />
 
-                <button
-                  class="btn btn-outline-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#sermon3">
-                  Read Sermon
-                </button>
+              <div class="card-body">
+                <h5 class="sermon-title">The Wailing of Risca</h5>
+
+                <p class="sermon-meta">Topic: Judgment</p>
+
+                <p class="sermon-verse">Jeremiah 4:20</p>
+
+                <div class="sermon-buttons">
+                  <button
+                    class="btn btn-dark"
+                    data-bs-toggle="modal"
+                    data-bs-target="#sermon3">
+                    Read
+                  </button>
+
+                  <a
+                    href="https://www.youtube.com/watch?v=oyUcP1jAlVI"
+                    target="_self"
+                    class="btn btn-outline-dark">
+                    Watch
+                  </a>
+
+                  <a
+                    href="https://www.spurgeon.org/resource-library/sermons/the-wailing-of-risca/#flipbook/"
+                    target="_self"
+                    class="btn btn-outline-secondary">
+                    Resource
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -174,95 +305,123 @@
       </div>
     </section>
 
-    <!-- Sermon 1  -->
+    <!-- Sermon 1 modal -->
     <div class="modal fade" id="sermon1" tabindex="-1">
       <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">The Blood of the Lamb</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"></button>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
           </div>
 
           <div class="modal-body">
-            <p><strong>Topic:</strong> Salvation</p>
+            <p><strong>Scripture:</strong> John 1:29</p>
 
             <p>
-              The blood of the Lamb is the foundation of our salvation. Through
-              the sacrifice of Jesus Christ, we receive forgiveness of sins and
-              reconciliation with God.
+              This sermon teaches that the victory of believers over Satan and
+              sin comes through the blood of the Lamb—Jesus Christ’s sacrificial
+              death on the cross. Satan is portrayed as a powerful enemy who
+              accuses and deceives humanity, but Christ has already defeated him
+              through His death and resurrection.
             </p>
 
             <p>
-              In the Old Testament, sacrifices were offered as a temporary
-              covering for sin, but Christ offered Himself once and for all. His
-              blood cleanses us completely and brings us into the presence of
-              God.
+              The blood of Christ represents His substitutionary sacrifice,
+              where He took the punishment for humanity’s sins so that believers
+              could be forgiven and justified before God. Because of this
+              sacrifice, Christians have confidence to approach God in prayer
+              and strength to resist temptation.
             </p>
 
             <p>
-              Therefore, we must trust not in our works but in the finished work
-              of Christ on the cross.
+              Believers overcome the enemy by trusting in Christ’s atonement,
+              proclaiming the message of the cross, and living faithfully for
+              God even in the face of hardship. The sermon reminds Christians
+              that the cross is the greatest weapon against sin, despair, and
+              evil, and calls all people to place their faith in Jesus for
+              salvation.
             </p>
           </div>
         </div>
       </div>
     </div>
-    <!-- Sermon 2 Modal -->
+
+    <!-- Sermon 2 modal -->
     <div class="modal fade" id="sermon2" tabindex="-1">
       <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Compel Them to Come In</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"></button>
+            <h5 class="modal-title">The Blood of the Lamb</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
           </div>
 
           <div class="modal-body">
-            <p><strong>Topic:</strong> Evangelism</p>
+            <p><strong>Scripture:</strong> Luke 14:23</p>
 
             <p>
-              The command of Christ is clear: we must go into the world and
-              preach the Gospel to every creature.
+              This sermon highlights the urgent call of the Gospel for sinners
+              to come to Christ. Though humanity is lost in sin and unable to
+              save itself, God in His mercy sent Jesus to die for sinners so
+              that whoever believes in Him may receive forgiveness and eternal
+              life.
             </p>
 
             <p>
-              Evangelism is not merely an option for the church—it is our
-              mission. Christ calls His followers to invite others to the great
-              banquet of salvation.
+              The message calls those who feel spiritually poor, broken, or lost
+              to respond to God’s invitation today. It warns against delaying
+              repentance and reminds listeners that life is uncertain and
+              judgment is real. While ministers can preach and plead, it is the
+              Holy Spirit who changes hearts and leads people to salvation.
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Sermon 3 Modal  -->
+    <!-- Sermon 3 modal -->
     <div class="modal fade" id="sermon3" tabindex="-1">
       <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">The Wailing of Risca</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"></button>
+            <h5 class="modal-title">The Blood of the Lamb</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
           </div>
 
           <div class="modal-body">
-            <p><strong>Topic:</strong> Judgment</p>
+            <p><strong>Text:</strong> Numbers 32:23</p>
 
             <p>
-              The story of Risca reminds us of the consequences of sin and the
-              seriousness of God's judgment.
+              This sermon reflects on the tragic mining disaster in
+              <b>Risca, South Wales</b>, where many miners suddenly lost their
+              lives in an explosion. Using this heartbreaking event, the message
+              highlights the deep sorrow of sudden loss and the reality that
+              life can change in a moment. Families who expected their loved
+              ones to return home were instead faced with grief, reminding
+              everyone of the fragile nature of life.
             </p>
 
             <p>
-              Yet even in judgment, we see God's justice and the call for
-              repentance.
+              The sermon teaches that sudden bereavement and sudden death should
+              lead people to reflect seriously on their relationship with God.
+              Since life is uncertain and death can come without warning, people
+              should not delay repentance or ignore the call of the Gospel.
+              Believers are also encouraged to cherish their loved ones, pray
+              for their families, and live faithfully while they still have
+              time.
+            </p>
+            <p>
+              Another key theme is the eternal consequences of death. For those
+              who trust in Christ, death brings a glorious and immediate
+              entrance into eternal joy with God. However, for those who reject
+              Christ, death brings the terrifying reality of judgment and
+              separation from God.
+            </p>
+            <p>
+              Ultimately, the sermon calls listeners to prepare their hearts
+              today. Life is short and uncertain, but salvation is offered
+              freely through Jesus Christ. Therefore, every person is urged to
+              turn to Christ, trust in His grace, and live with eternity in
+              view.
             </p>
           </div>
         </div>
@@ -270,22 +429,45 @@
     </div>
 
     <!-- QUOTES -->
-
     <section class="quote-section text-center">
-      <div class="container">
-        <h2>SPURGEONs FAMOUS QUOTES</h2>
+      <div class="QuoteContainer">
+        <h2 style="font-weight: bold">SPURGEONs FAMOUS QUOTES</h2>
+        <div class="quote-container">
+          <div class="quote-card">
+            "If sinners be damned, at least let them leap to Hell over our dead
+            bodies"
+          </div>
+          <div class="quote-card">
+            "By perseverance the snail reached the ark."
+          </div>
+          <div class="quote-card">
+            "A Bible that's falling apart usually belongs to someone who isn't."
+          </div>
+          <div class="quote-card">
+            "Faith goes up the stairs that love has built."
+          </div>
+          <div class="quote-card">"Nobody ever outgrows Scripture."</div>
 
-        <p id="quoteText">
-          "If sinners be damned, at least let them leap to Hell over our dead
-          bodies
-        </p>
-
-        <button class="btn btn-gold" onclick="newQuote()">New Quote</button>
+          <!-- Duplicate Items -->
+          <div class="quote-card">
+            "If sinners be damned, at least let them leap to Hell over our dead
+            bodies"
+          </div>
+          <div class="quote-card">
+            "By perseverance the snail reached the ark."
+          </div>
+          <div class="quote-card">
+            "A Bible that's falling apart usually belongs to someone who isn't."
+          </div>
+          <div class="quote-card">
+            "Faith goes up the stairs that love has built."
+          </div>
+          <div class="quote-card">"Nobody ever outgrows Scripture."</div>
+        </div>
       </div>
     </section>
 
     <!-- TIMELINE -->
-
     <section id="timeline" class="section">
       <div class="container">
         <h2 class="text-center mb-5">Life Timeline</h2>
@@ -448,9 +630,9 @@
         </div>
       </div>
     </section>
-
+    <button id="backToTop">↑</button>
     <footer class="text-center">
-      <p>© 2026 Spurgeon Archive</p>
+      <p>© 2026 Educational Purposes - No copyright infringement</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
