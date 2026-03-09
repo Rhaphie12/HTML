@@ -1,7 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-family: Poppins;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .nav-blur {
   background: rgba(11, 29, 58, 0.85);
   backdrop-filter: blur(10px);
@@ -41,7 +51,7 @@ body {
 }
 
 .btn-gold {
-  background: #c9a24a;
+  background: #c9a24a !important;
   color: white;
   border: none;
 }
@@ -50,25 +60,93 @@ body {
   padding: 100px 0;
 }
 
+/* SERMONS */
 .sermon-card {
-  transition: 0.4s;
   border: none;
+  overflow: hidden;
+  transition: 0.4s;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .sermon-card:hover {
   transform: translateY(-8px);
-}
-.sermon-card .btn {
-  width: 100%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
+.sermon-img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.sermon-title {
+  font-weight: 600;
+}
+
+.sermon-meta {
+  font-size: 14px;
+  color: #777;
+}
+
+.sermon-verse {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.sermon-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn {
+  margin: 5px;
+}
+
+/* QUOTE SECTION */
 .quote-section {
   background: #0b1d3a;
   color: white;
   padding: 80px;
 }
 
+.QuoteContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.quote-card {
+  width: 200px;
+  height: 300px;
+  background-color: #c9a24a;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin: 50px 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.quote-container {
+  display: flex;
+  width: fit-content;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* TIMELINE SECTION */
 .timeline {
   position: relative;
   margin: 40px auto;
@@ -154,6 +232,27 @@ body {
 .modal-body img {
   max-height: 400px;
   object-fit: contain;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #c9a24a;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#backToTop:hover {
+  background: #c9a24a;
+  transform: translateY(-3px);
 }
 
 footer {
