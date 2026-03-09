@@ -1,5 +1,6 @@
 AOS.init();
 
+// Quote Funcionality
 const quotes = [
   `"By perseverance the snail reached the ark."`,
   `"A Bible that's falling apart usually belongs to someone who isn't."`,
@@ -66,5 +67,59 @@ galleryImages.forEach((img) => {
     document.getElementById("modalImage").src = src;
     document.getElementById("modalTitle").innerText = title;
     document.getElementById("modalDescription").innerText = description;
+  });
+});
+
+// Sermon Archive Filtering
+const filterButtons = document.querySelectorAll(".filter-btn");
+const sermonItems = document.querySelectorAll(".sermon-item");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.getAttribute("data-filter");
+
+    sermonItems.forEach((item) => {
+      if (filter === "all" || item.dataset.category === filter) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  });
+});
+
+const searchInput = document.getElementById("sermonSearch");
+
+searchInput.addEventListener("keyup", function () {
+  const searchValue = this.value.toLowerCase();
+
+  sermonItems.forEach((item) => {
+    const title = item.querySelector(".sermon-title").textContent.toLowerCase();
+
+    if (title.includes(searchValue)) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+});
+
+const backToTop = document.getElementById("backToTop");
+
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
+  ) {
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
+  }
+};
+
+backToTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
 });
